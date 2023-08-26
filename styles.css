@@ -1,81 +1,107 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
 }
-.hero{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: #eff4ef;
-}
-nav{
+
+body{
     display: flex;
-    width: 84%;
-    margin: auto;
-
-    padding: 20px 0;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    min-height: 100vh;
 }
-nav ul li{
-    display:inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
 
+.container{
+    max-width: 450px;
+    background: #003333;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
+    font-family: sans-serif;
+    padding: 20px;
 }
-nav ul li a:hover{
-    color:red;
 
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
 }
-.detel{
-    margin-left: 8%;
-    margin-top: 15%;
-}
-.detel h1{
-    font: size 50px;
-    color: #212121;
-    margin-bottom: 20px;
 
+.Temperature-icon{
+    font-size: 45px;
+    color: #fff;
 }
-span{
-    color:orange;
-}
-.detel p{
-    color: #555;
-    line-height: 22px;
-}
-.detel a{
-    background: #fff;
-    padding: 20px 18px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #212121;
-    display:inline-block;
-    margin: 50px 0;
-    border-radius: 10px;
-}
-.images{
-    width: 45%;
-    height: 80px;
-    position: absolute;
-    bottom:0;
-    right: 100px;
 
+h1{
+    color: #fff;
+    letter-spacing: 1.2px;
+    font-size: 30px;
 }
-.images img{
-    height: 600%;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translatex(-50%);
-    transition: bottom 1s, left 1s;
+
+#celsius, #fahrenheit, #kelvin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
 }
-.images:hover .girl{
-    left:45%;
+
+input{
+    flex: 5;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 8px 0 0 8px;
+    padding: 0 10px;
+}
+
+
+/* for chrome, safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+/* for Mozila firefox */
+input{
+    -moz-appearance: textfield;
+}
+
+
+.icon{
+    flex: 1;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 30px;
+    background: #4d5964;
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+}
+
+
+.button{
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+.button button{
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #000;
+    color: #fff;
 }
